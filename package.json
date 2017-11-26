@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine-node ./test",
-    "build": "uglifyjs index.js -c \"evaluate=false\" -m --source-map index-min.map -o index-min.js"
+    "build": "uglifyjs index.js --compress --mangle --output all-error-handler.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jkanchelov/all-error-handler.git"
   },
   "keywords": [
-    "uncaught",    
+    "uncaught",
     "error",
     "handle"
   ],
