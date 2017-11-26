@@ -1,6 +1,6 @@
 # all-error-handler v0.1.0
 
-The [all-error-handler](https://lodash.com/) library is  exported as a [UMD](https://github.com/umdjs/umd) module.
+The [all-error-handler](https://github.com/jkanchelov/all-error-handler) library is  exported as a [UMD](https://github.com/umdjs/umd) module.
 
 ## Installation
 
