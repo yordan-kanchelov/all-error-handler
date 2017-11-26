@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine-node ./test",
-    "build": "uglifyjs index.js --compress --mangle --output all-error-handler.js"
+    "build": "uglifyjs index.js --compress --mangle --output index.min.js"
   },
   "repository": {
     "type": "git",
