@@ -1,0 +1,26 @@
+{
+  "name": "all-error-handler",
+  "version": "1.0.0",
+  "description": "handle all errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node ./test",
+    "build": "uglifyjs index.js -c \"evaluate=false\" -m --source-map index-min.map -o index-min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkanchelov/all-error-handler.git"
+  },
+  "keywords": [
+    "uncaught",    
+    "error",
+    "handle"
+  ],
+  "author": "jkanchelov",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jkanchelov/all-error-handler#readme",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "dependencies": {}
+}
