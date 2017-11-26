@@ -6,7 +6,7 @@ The [all-error-handler](https://github.com/jkanchelov/all-error-handler) library
 
 In a browser:
 ```html
-<script src="node_modules/all-error-handler.js/index.js"></script>
+<script src="node_modules/all-error-handler/index.min.js"></script>
 ```
 
 In Node.js:
@@ -18,3 +18,7 @@ let AllErrorHandler = require("all-error-handler");
 let errorHandler = new AllErrorHandler((err) =>{
     console.log(`Error occured ${err}`);
 })
+
+//Test
+throw new Error("Foo"); // Error occured Error: Foo 
+//  at Object.<anonymous> ...
