@@ -1,4 +1,4 @@
-# all-error-handler v0.3.2
+# all-error-handler v0.3.3
 
 [АllЕrrorHandler](https://github.com/jkanchelov/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function.
 АllЕrrorHandler package is  exported as a [UMD](https://github.com/umdjs/umd) module.
@@ -32,20 +32,23 @@ throw new Error("Foo"); // Error occured - Error: Foo
 new AllErrorHandler({Function}callback, {Boolean}startListening = true)
 ````
 -- callback - pass a function which will be called after an Error is throwed.
+
 -- startListening - if true it will start listining for the errors when the object is created. 
 
-## Methods
-startListening
+## Methods: 
+
+####
+#### startListening();
 -- Start listening for error events 
 ```js
 errorHandler.startListening();
 ````
-### stopListening
+#### stopListening();
 -- Stop listening for error events
 ```js
 errorHandler.stopListening();
 ````
-### dispose();
+#### dispose();
 -- Call before setting the object to null to prevent memory leak 
 ```js
 errorHandler.dispose();
