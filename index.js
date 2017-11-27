@@ -9,7 +9,7 @@
      */
     class AllErrorHandler {
         /**
-         * Create a point.
+         * Create a allErrorHandler object.
          * @param {Function} callback - The callback which is called after an occured error event.
          * @param {Boolean} startListening - Chose if the object should start listening immediately.
          */
