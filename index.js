@@ -4,37 +4,68 @@
     var root = this
     var previous_mymodule = root.AllErrorHandler
 
+    /**
+     * Class providing objects to listen for uncaught errors.
+     */
     class AllErrorHandler {
-        constructor(callback) {
-            if(!callback) {
+        /**
+         * Create a point.
+         * @param {Function} callback - The callback which is called after an occured error event.
+         * @param {Boolean} startListening - Chose if the object should start listening immediately.
+         */
+        constructor(callback, startListening = true) {
+            if (!callback) {
                 throw new Error("Missing callback function");
             }
 
             this.callback = callback;
 
-            this._setupEvents();
+            if (startListening) {
+                this._setupEvents();
+            }
         }
 
+        /**
+         * Start listening for error events.
+         * @return {void}
+         */
         startListening() {
             this._setupEvents();
         }
 
+        /**
+         * Stop listening for error events.
+         * @return {void} The x value.
+         */
         stopListening() {
             this._setupEvents(false);
         }
 
+        /**
+         * Call if there is a namespace conflict. 
+         * @return {AllErrorHandler}  Returns a AllErrorHandler constructor.
+         */
         noConflict() {
             root.AllErrorHandler = previous_mymodule
             return AllErrorHandler
         }
 
+        /**
+         * Disposing the class so there would be no memory leak.
+         * @return {void}
+         */
         dispose() {
             this._setupEvents(false);
             this.callback = null;
         }
 
-        _setupEvents(on = true) {
-            if (on) {
+        /**
+         * It will attatch or detatch the listening event based on the given parametter;
+         * @param {Boolean} attatch - if true the object will start listening. 
+         * @return {void}
+         */
+        _setupEvents(attatch = true) {
+            if (attatch) {
                 if (typeof window !== "undefined") {
                     window.addEventListener("error", this.callback);
                 } else {
@@ -43,8 +74,7 @@
             } else {
                 if (typeof window !== "undefined") {
                     window.removeEventListener("error", this.callback, true);
-                }
-                else {
+                } else {
                     process.off('uncaughtException', this.callback);
                 }
             }
@@ -56,8 +86,7 @@
             exports = module.exports = AllErrorHandler
         }
         exports.AllErrorHandler = AllErrorHandler
-    }
-    else {
+    } else {
         root.AllErrorHandler = AllErrorHandler
     }
 }).call(this);
