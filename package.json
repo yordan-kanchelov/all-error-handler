@@ -1,6 +1,6 @@
 {
   "name": "all-error-handler",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "handle all errors",
   "main": "index.js",
   "scripts": {
