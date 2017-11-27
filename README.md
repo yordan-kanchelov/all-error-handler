@@ -1,4 +1,4 @@
-# all-error-handler v0.3.5
+# all-error-handler
 
 [АllЕrrorHandler](https://github.com/jkanchelov/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function.
 
