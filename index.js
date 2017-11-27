@@ -80,8 +80,9 @@
             }
         }
     }
-
-    if (typeof exports !== 'undefined') {
+    if (typeof define === 'function' && define.amd) {
+        define([], AllErrorHandler);
+    } else if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = AllErrorHandler
         }
