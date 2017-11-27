@@ -42,7 +42,7 @@
         }
 
         /**
-         * Call if there is a namespace conflict. 
+         * Call noConflict to avoid conflicts over the AllErrorHandler name
          * @return {AllErrorHandler}  Returns a AllErrorHandler constructor.
          */
         noConflict() {
