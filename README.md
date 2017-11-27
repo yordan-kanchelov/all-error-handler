@@ -35,15 +35,18 @@ new AllErrorHandler({Function}callback, {Boolean}startListening = true)
 -- startListening - if true it will start listining for the errors when the object is created. 
 
 ## Methods
-Start listening for error events 
+[startListening]()
+-- Start listening for error events 
 ```js
 errorHandler.startListening();
 ````
-Stop listening for error events
+### stopListening
+-- Stop listening for error events
 ```js
 errorHandler.stopListening();
 ````
-call before setting  to null; 
+### dispose();
+-- Call before setting the object to null to prevent memory leak 
 ```js
 errorHandler.dispose();
 errorHandler = null;
