@@ -1,5 +1,6 @@
 # all-error-handler
 
+[![Known Vulnerabilities](https://snyk.io/test/github/jkanchelov/all-error-handler/badge.svg)](https://snyk.io/test/github/jkanchelov/all-error-handler)
 [![devDependencies Status](https://david-dm.org/jkanchelov/all-error-handler/dev-status.svg)](https://david-dm.org/jkanchelov/all-error-handler?type=dev) [![Build Status](https://travis-ci.org/jkanchelov/all-error-handler.svg?branch=master)](https://travis-ci.org/jkanchelov/all-error-handler)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler?ref=badge_shield)
 
