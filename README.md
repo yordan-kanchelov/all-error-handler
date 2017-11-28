@@ -1,5 +1,7 @@
 # all-error-handler
 
+[![Build Status](https://travis-ci.org/jkanchelov/all-error-handler.svg?branch=master)](https://travis-ci.org/jkanchelov/all-error-handler)
+
 [АllЕrrorHandler](https://github.com/jkanchelov/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function.
 
 АllЕrrorHandler package is  exported as a [UMD](https://github.com/umdjs/umd) module.
