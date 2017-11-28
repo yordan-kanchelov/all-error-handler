@@ -12,7 +12,6 @@ describe('Constructor tests', function () {
 
         setTimeout(() => {
             throw error;
-            jas
         }, 0)
     });
 
@@ -66,8 +65,6 @@ describe("Methods Tests", function () {
     })
 
     it('handler should start listening', function (done) {
-        const error = new Error("testError-3");
-
         let errorHandler = new AllErrorHandler(() => {
             setTimeout(() => {
                 // TODO 
@@ -82,7 +79,7 @@ describe("Methods Tests", function () {
         errorHandler.startListening();
 
         setTimeout(() => {
-            throw error;
+            throw new Error("testError-5");
         }, 0)
     })
 })
