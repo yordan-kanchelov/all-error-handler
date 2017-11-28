@@ -1,6 +1,7 @@
 # all-error-handler
 
 [![devDependencies Status](https://david-dm.org/jkanchelov/all-error-handler/dev-status.svg)](https://david-dm.org/jkanchelov/all-error-handler?type=dev) [![Build Status](https://travis-ci.org/jkanchelov/all-error-handler.svg?branch=master)](https://travis-ci.org/jkanchelov/all-error-handler)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler?ref=badge_shield)
 
 [АllЕrrorHandler](https://github.com/jkanchelov/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function.
 
@@ -57,3 +58,7 @@ errorHandler.stopListening();
 errorHandler.dispose();
 errorHandler = null;
 ````
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler?ref=badge_large)
