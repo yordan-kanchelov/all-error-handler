@@ -18,7 +18,8 @@
                 throw new Error("Missing callback function");
             }
 
-            this.callback = callback;
+            this._callback = callback;
+            this._listening = false;
 
             if (startListening) {
                 this._setupEvents();
@@ -30,7 +31,9 @@
          * @return {void}
          */
         startListening() {
-            this._setupEvents();
+            if (!this._listening) {
+                this._setupEvents();
+            }
         }
 
         /**
@@ -38,7 +41,9 @@
          * @return {void} The x value.
          */
         stopListening() {
-            this._setupEvents(false);
+            if (this._listening) {
+                this._setupEvents(false);
+            }
         }
 
         /**
@@ -55,8 +60,11 @@
          * @return {void}
          */
         dispose() {
-            this._setupEvents(false);
-            this.callback = null;
+            if (this._listening) {
+                this._setupEvents(false);
+            }
+
+            this._callback = null;
         }
 
         /**
@@ -65,17 +73,19 @@
          * @return {void}
          */
         _setupEvents(attatch = true) {
+            this._listening = attatch ? true : false;
+
             if (attatch) {
                 if (typeof window !== "undefined") {
-                    window.addEventListener("error", this.callback);
+                    window.addEventListener("error", this._callback);
                 } else {
-                    process.on('uncaughtException', this.callback);
+                    process.on('uncaughtException', this._callback);
                 }
             } else {
                 if (typeof window !== "undefined") {
-                    window.removeEventListener("error", this.callback, true);
+                    window.removeEventListener("error", this._callback);
                 } else {
-                    process.off('uncaughtException', this.callback);
+                    process.removeListener('uncaughtException', this._callback);
                 }
             }
         }
@@ -91,3 +101,4 @@
         root.AllErrorHandler = AllErrorHandler
     }
 }).call(this);
+
