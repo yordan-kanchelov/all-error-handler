@@ -1,10 +1,10 @@
 {
   "name": "all-error-handler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "handle all uncaught errors",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node ./test",
+    "test": "./node_modules/.bin/jasmine-node ./tests",
     "build": "uglifyjs index.js --compress --mangle --output index.min.js"
   },
   "repository": {
