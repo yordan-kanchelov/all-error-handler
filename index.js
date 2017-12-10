@@ -38,7 +38,7 @@
 
         /**
          * Stop listening for error events.
-         * @return {void} The x value.
+         * @return {void}
          */
         stopListening() {
             if (this._listening) {
