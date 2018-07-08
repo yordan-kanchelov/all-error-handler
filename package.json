@@ -1,31 +1,31 @@
 {
-  "name": "all-error-handler",
-  "version": "1.0.5",
-  "description": "handle all uncaught errors",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/jasmine-node ./tests",
-    "build": "uglifyjs index.js --compress --mangle --output index.min.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jkanchelov/all-error-handler.git"
-  },
-  "keywords": [
-    "all",
-    "error",
-    "handler",
-    "handle",
-    "catch",
-    "uncaught",
-    "errors",
-    "exceptions"
-  ],
-  "author": "jkanchelov",
-  "license": "MIT",
-  "homepage": "https://github.com/jkanchelov/all-error-handler#readme",
-  "devDependencies": {
-    "jasmine-node": "^1.14.5"
-  },
-  "dependencies": {}
+    "name": "all-error-handler",
+    "version": "1.1.0",
+    "description": "handle all uncaught errors",
+    "main": "index.min.js",
+    "scripts": {
+        "test": "./node_modules/.bin/jasmine-node ./tests",
+        "build": "uglifyjs index.js --compress --mangle --output index.min.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jkanchelov/all-error-handler.git"
+    },
+    "keywords": [
+        "all",
+        "error",
+        "handler",
+        "handle",
+        "catch",
+        "uncaught",
+        "errors",
+        "exceptions"
+    ],
+    "author": "jkanchelov",
+    "license": "MIT",
+    "homepage": "https://github.com/jkanchelov/all-error-handler#readme",
+    "devDependencies": {
+        "jasmine-node": "^1.14.5",
+        "uglify-js": "^3.4.3"
+    }
 }
