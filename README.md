@@ -4,6 +4,7 @@
 [![devDependencies Status](https://david-dm.org/jkanchelov/all-error-handler/dev-status.svg)](https://david-dm.org/jkanchelov/all-error-handler?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkanchelov/all-error-handler/badge.svg)](https://snyk.io/test/github/jkanchelov/all-error-handler)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjkanchelov%2Fall-error-handler?ref=badge_shield)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 [АllЕrrorHandler](https://www.npmjs.com/package/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function.
 
