@@ -17,20 +17,16 @@
             }
 
             this._callback = callback;
-            this._listening = false;
+            this._listening = startListening;
 
-            if (startListening) {
-                this._setupEvents();
-            }
+            this._setupEvents(this._listening);
         }
         /**
          * Start listening for error events.
          * @return {void}
          */
         startListening() {
-            if (!this._listening) {
-                this._setupEvents();
-            }
+            this._setupEvents(true);
         }
 
         /**
@@ -38,9 +34,7 @@
          * @return {void}
          */
         stopListening() {
-            if (this._listening) {
-                this._setupEvents(false);
-            }
+            this._setupEvents(false);
         }
 
         /**
@@ -65,14 +59,14 @@
         }
 
         /**
-         * It will attatch or detatch the listening event based on the given parameter;
-         * @param {Boolean} attatch - if true the object will start listening.
+         * It will attach or detach the listening event based on the given parameter;
+         * @param {Boolean} attach - if true the object will start listening.
          * @return {void}
          */
-        _setupEvents(attatch = true) {
-            this._listening = attatch ? true : false;
+        _setupEvents(attach) {
+            this._listening = attach ? true : false;
 
-            if (attatch) {
+            if (attach) {
                 if (typeof window !== "undefined") {
                     window.addEventListener("error", this._callback);
                 } else {
