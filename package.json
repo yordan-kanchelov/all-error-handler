@@ -3,6 +3,7 @@
     "version": "1.2.0",
     "description": "handle all uncaught errors",
     "main": "index.min.js",
+    "types": "index.d.ts",
     "scripts": {
         "test": "./node_modules/.bin/jasmine-node ./tests",
         "build": "uglifyjs index.js --compress --mangle --output index.min.js"
