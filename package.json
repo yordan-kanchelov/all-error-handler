@@ -1,6 +1,6 @@
 {
     "name": "all-error-handler",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "handle all uncaught errors",
     "main": "index.min.js",
     "types": "index.d.ts",
