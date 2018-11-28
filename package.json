@@ -5,8 +5,8 @@
     "main": "index.min.js",
     "types": "index.d.ts",
     "scripts": {
-        "test": "./node_modules/.bin/jasmine-node ./tests",
-        "build": "uglifyjs index.js --compress --mangle --output index.min.js"
+        "test": "npx jasmine-node ./tests",
+        "build": "npx uglifyjs index.js --compress --mangle --output index.min.js"
     },
     "repository": {
         "type": "git",
