@@ -1,6 +1,6 @@
 # all-error-handler
 
-### [АllЕrrorHandler](https://github.com/jkanchelov/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function. 
+### [АllЕrrorHandler](https://www.npmjs.com/package/all-error-handler) provides you a object, which will listen for error events and then call a provided callback function. 
 
 #### АllЕrrorHandler package is exported as a [UMD](https://github.com/umdjs/umd) module.
 
