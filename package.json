@@ -1,12 +1,13 @@
 {
     "name": "all-error-handler",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "handle all uncaught errors",
     "main": "index.min.js",
     "types": "index.d.ts",
     "scripts": {
         "test": "npx jasmine-node ./tests",
-        "build": "npx uglifyjs index.js --compress --mangle --output index.min.js"
+        "build": "npx uglifyjs index.js --compress --mangle --output index.min.js",
+        "prepublish": "npm run build"
     },
     "repository": {
         "type": "git",
