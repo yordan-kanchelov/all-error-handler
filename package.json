@@ -9,7 +9,7 @@
         "clean": "npx del-cli types.d.ts index.min.js index.d.ts",
         "build": "npx uglify-es index.js --compress --mangle --output index.min.js",
         "generateDefs": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r index.js -d . && npx rename-cli types.d.ts index.d.ts",
-        "prepublish": "npm run cleanclean && npm run test && npm run generateDefs && npm run build"
+        "prepublish": "npm run clean && npm run test && npm run generateDefs && npm run build"
     },
     "repository": {
         "type": "git",
