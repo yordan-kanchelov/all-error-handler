@@ -58,3 +58,4 @@ typings/
 .env
 
 index.min.js
+index.d.ts
