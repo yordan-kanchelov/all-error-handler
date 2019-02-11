@@ -7,8 +7,15 @@
      */
     class AllErrorHandler {
         /**
+         * This callback type is called `requestCallback` and is displayed as a global symbol.
+         *
+         * @callback ErrorCallback
+         * @param {ErrorEvent} error - error object 
+         */
+
+        /**
          * Create a allErrorHandler object.
-         * @param {Function} callback - The callback which is called after an occurred error event.
+         * @param {ErrorCallback} callback - The callback which is called after an occurred error event.
          * @param {Boolean} startListening - Chose if the object should start listening immediately.
          */
         constructor(callback, startListening = true) {
