@@ -7,7 +7,7 @@
     "scripts": {
         "test": "npx jasmine-node ./tests",
         "build": "npx uglify-es index.js --compress --mangle --output index.min.js",
-        "generateDefs": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r index.js -d . && mv ./types.d.ts index.d.ts",
+        "generateDefs": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r index.js -d . && npx rename-cli types.d.ts index.d.ts",
         "prepublish": "npm run test && npm run generateDefs && npm run build"
     },
     "repository": {
