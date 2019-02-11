@@ -6,9 +6,10 @@
     "types": "index.d.ts",
     "scripts": {
         "test": "npx jasmine-node ./tests",
+        "clean": "npx del-cli types.d.ts index.min.js index.d.ts",
         "build": "npx uglify-es index.js --compress --mangle --output index.min.js",
         "generateDefs": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r index.js -d . && npx rename-cli types.d.ts index.d.ts",
-        "prepublish": "npm run test && npm run generateDefs && npm run build"
+        "prepublish": "npm run cleanclean && npm run test && npm run generateDefs && npm run build"
     },
     "repository": {
         "type": "git",
@@ -28,6 +29,7 @@
     "license": "MIT",
     "homepage": "https://github.com/jkanchelov/all-error-handler#readme",
     "devDependencies": {
+        "del-cli": "^1.1.0",
         "jasmine-node": "^1.14.5",
         "jsdoc": "^3.5.5",
         "rename-cli": "^6.0.0",
