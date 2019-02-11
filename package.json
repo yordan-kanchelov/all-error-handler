@@ -7,6 +7,7 @@
     "scripts": {
         "test": "npx jasmine-node ./tests",
         "build": "npx uglify-es index.js --compress --mangle --output index.min.js",
+        "generateDefs": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r index.js -d . && mv ./types.d.ts index.d.ts",
         "prepublish": "npm run test && npm run build"
     },
     "repository": {
@@ -28,6 +29,7 @@
     "homepage": "https://github.com/jkanchelov/all-error-handler#readme",
     "devDependencies": {
         "jasmine-node": "^1.14.5",
+        "jsdoc": "^3.5.5",
         "uglify-es": "^3.3.9"
     }
 }
