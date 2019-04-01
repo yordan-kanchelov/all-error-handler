@@ -26,14 +26,22 @@
             this._callback = callback;
             this._listening = startListening;
 
-            this._setupEvents(this._listening);
+            if (this._listening) {
+                this._setupEvents();
+            }
         }
         /**
          * Start listening for error events.
          * @return {void}
          */
         startListening() {
-            this._setupEvents(true);
+            this._listening = true;
+
+            if (typeof window !== "undefined") {
+                window.addEventListener("error", this._callback);
+            } else {
+                process.on("uncaughtException", this._callback);
+            }
         }
 
         /**
@@ -41,7 +49,13 @@
          * @return {void}
          */
         stopListening() {
-            this._setupEvents(false);
+            this._listening = false;
+
+            if (typeof window !== "undefined") {
+                window.removeEventListener("error", this._callback);
+            } else {
+                process.removeListener("uncaughtException", this._callback);
+            }
         }
 
         /**
@@ -59,33 +73,10 @@
          */
         dispose() {
             if (this._listening) {
-                this._setupEvents(false);
+                this.stopListening();
             }
 
             this._callback = null;
-        }
-
-        /**
-         * It will attach or detach the listening event based on the given parameter;
-         * @param {Boolean} attach - if true the object will start listening.
-         * @return {void}
-         */
-        _setupEvents(attach) {
-            this._listening = attach ? true : false;
-
-            if (attach) {
-                if (typeof window !== "undefined") {
-                    window.addEventListener("error", this._callback);
-                } else {
-                    process.on("uncaughtException", this._callback);
-                }
-            } else {
-                if (typeof window !== "undefined") {
-                    window.removeEventListener("error", this._callback);
-                } else {
-                    process.removeListener("uncaughtException", this._callback);
-                }
-            }
         }
     }
     if (typeof define === "function" && define.amd) {
