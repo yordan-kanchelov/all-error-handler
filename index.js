@@ -25,7 +25,7 @@
 
             this._callback = callback;
 
-            if (this.startListening) {
+            if (startListening) {
                 this.startListening();
             }
         }
