@@ -24,10 +24,9 @@
             }
 
             this._callback = callback;
-            this._listening = startListening;
 
-            if (this._listening) {
-                this._setupEvents();
+            if (this.startListening) {
+                this.startListening();
             }
         }
         /**
