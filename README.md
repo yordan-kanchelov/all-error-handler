@@ -5,6 +5,7 @@
 #### АllЕrrorHandler package is exported as a [UMD](https://github.com/umdjs/umd) module.
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![npm downlodas](https://img.shields.io/npm/dm/all-error-handler.svg)](https://www.npmjs.com/package/all-error-handler)
 [![Build Status](https://travis-ci.org/jkanchelov/all-error-handler.svg?branch=master)](https://travis-ci.org/jkanchelov/all-error-handler)
 [![devDependencies Status](https://david-dm.org/jkanchelov/all-error-handler/dev-status.svg)](https://david-dm.org/jkanchelov/all-error-handler?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/jkanchelov/all-error-handler/badge.svg)](https://snyk.io/test/github/jkanchelov/all-error-handler)
