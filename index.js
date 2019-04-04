@@ -7,10 +7,10 @@
      */
     class AllErrorHandler {
         /**
-         * This callback type is called `requestCallback` and is displayed as a global symbol.
+         * Called when error is occurred 
          *
          * @callback ErrorCallback
-         * @param {ErrorEvent} error - error object 
+         * @param {ErrorEvent} error
          */
 
         /**
