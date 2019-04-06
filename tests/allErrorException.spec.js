@@ -17,7 +17,7 @@ describe("Constructor tests", function() {
 
     it("should not start listening if second param is false", function(done) {
         let errorHandler = new AllErrorHandler(() => {
-            fail();
+            done("ERROR");
         }, false);
 
         setTimeout(() => {
@@ -26,7 +26,6 @@ describe("Constructor tests", function() {
 
         errorHandler.dispose();
         errorHandler = null;
-        expect(true);
         done();
     });
 });
@@ -34,7 +33,7 @@ describe("Constructor tests", function() {
 describe("Methods Tests", function() {
     it("handler should stop listening", function(done) {
         let errorHandler = new AllErrorHandler(() => {
-            fail();
+            done("ERROR");
         });
 
         errorHandler.stopListening();
@@ -44,13 +43,12 @@ describe("Methods Tests", function() {
         }, 0);
 
         errorHandler.dispose();
-        expect(true);
         done();
     });
 
     it("dispose should work", function(done) {
         let errorHandler = new AllErrorHandler(() => {
-            fail();
+            done("ERROR");
         });
         errorHandler.dispose();
         errorHandler = null;
@@ -59,7 +57,6 @@ describe("Methods Tests", function() {
             throw new Error("testError-4");
         }, 0);
 
-        expect(true);
         done();
     });
 
@@ -69,7 +66,6 @@ describe("Methods Tests", function() {
                 errorHandler.dispose();
             }, 0);
 
-            expect(true).toBe(true);
             done();
         }, false);
 
