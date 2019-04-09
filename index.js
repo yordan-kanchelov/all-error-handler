@@ -39,7 +39,7 @@
             if (typeof window !== "undefined") {
                 window.addEventListener("error", this._callback);
             } else {
-                process.on("uncaughtException", this._callback);
+                process.prependListener("uncaughtException", this._callback);
             }
         }
 
