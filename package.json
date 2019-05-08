@@ -27,8 +27,8 @@
     "license": "MIT",
     "homepage": "https://github.com/jkanchelov/all-error-handler#readme",
     "devDependencies": {
+        "@types/node": "^12.0.0",
         "jasmine-node": "^1.14.5",
-        "uglify-es": "^3.3.9",
-        "@types/node": "^11.13.0"
+        "uglify-es": "^3.3.9"
     }
 }
